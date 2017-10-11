@@ -26,6 +26,12 @@
   align-items: center;
   height: 8px;
   padding: 1em;
+  position: relative;
+}
+.logo {
+  float: left;
+  position: absolute;
+  border: solid green 1px;
 }
 .floatright {
   float: right;
@@ -59,7 +65,7 @@
   transition: 0.4s;
 }
 .change .bar1 {
-  transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg)  translate(-3px, 3px);
 }
 .change .bar2 {opacity: 0;}
 .change .bar3 {

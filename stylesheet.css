@@ -2,10 +2,10 @@
   color: red;
 }*/
 
-.main-head {
+/*.main-head {
   grid-area: header;
   border: solid red 1px;
-}
+}*/
 .content {
   grid-area: content;
   border: solid yellow 1px;
@@ -18,30 +18,29 @@
   grid-area: sidebar;
   border: solid green 1px;
 }
-.ad {
+/*.ad {
   grid-area: ad;
   border: solid purple 1px;
-}
-.main-footer {
+}*/
+/*.main-footer {
   grid-area: footer;
   border: solid black 1px;
-}
+}*/
 
 
 
 .wrapper {
-  background-color: yellow;
+  background-color: pink;
   display: grid;
   grid-auto-rows: minmax(100px, auto);
   grid-gap: 20px;
   grid-template-columns: 1fr;
   grid-template-areas:
-    "header"
     "nav"
     "content"
-    "sidebar"
-    "ad"
-    "footer";
+    "content"
+    "content"
+    "sidebar";
   }
 
 
@@ -49,13 +48,15 @@
   /*iPhone 6s plus width is 750px */
   @media (min-width: 767px) {
     .wrapper {
-      background-color: pink;
+      background-color: beige;
       grid-template-columns: 1fr 3fr;
       grid-template-areas:
-        "header  header"
         "nav     nav"
         "sidebar content"
-        "ad      footer";
+        "sidebar content"
+        "sidebar content"
+        "sidebar content"
+        "sidebar content";
     }
     nav ul {
       display: flex;

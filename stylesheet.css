@@ -17,22 +17,17 @@
 }
 .main-nav {
   grid-area: nav;
-  border: solid red 1px;
-  background-color: red;
+  background-color: #e06857;
 }
 .navbar {
   list-style: none;
   align-items: center;
-  height: 30px;
+  height: 10px;
   padding: 1em;
   font-weight: bold;
 }
-.floatleft {
-    float: left;
-    font-size: 200%;
-}
 .floatright {
-    float: right;
+  float: right;
 }
 .navbar li {
   display: inline;
@@ -51,13 +46,6 @@
   grid-area: sidebar;
   border: solid green 1px;
 }
-/*.ad {
-  grid-area: ad;
-}*/
-/*.main-footer {
-  grid-area: footer;
-}*/
-
 
 
 .wrapper {

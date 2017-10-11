@@ -31,7 +31,10 @@
 .logo {
   float: left;
   position: absolute;
+  left: 0;
+  top: 0;
   border: solid green 1px;
+  padding-left: 3px;
 }
 .floatright {
   float: right;

@@ -14,37 +14,63 @@
 .content {
   grid-area: content;
   border: solid yellow 1px;
+  background-color: lightgreen;
 }
 .main-nav {
   grid-area: nav;
-  background-color: #e06857;
+  /*background-color: #e06857;*/
+  border-bottom: solid black 1px;
 }
 .navbar {
   list-style: none;
   align-items: center;
-  height: 10px;
+  height: 8px;
   padding: 1em;
-  font-weight: bold;
 }
 .floatright {
   float: right;
 }
 .navbar li {
   display: inline;
-  padding: 0 1.5em;
+  /*padding: 0 1.5em;*/
 }
 .navbar a {
   color: white;
   text-decoration: none;
+  font-size: medium;
 }
 .navbar a:hover {
  color: blue;
  text-decoration: none;
  cursor: pointer;
 }
+
+/*hamburger icon*/
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  padding-top: 5px;
+}
+.bar1, .bar2, .bar3 {
+  width: 28px;
+  height: 3px;
+  background-color: black;
+  margin: 4px 6px 4px 6px;
+  transition: 0.4s;
+}
+.change .bar1 {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+/*hamburger icon*/
+
 .side {
   grid-area: sidebar;
-  border: solid green 1px;
+  border: solid purple 1px;
+  background: white;
 }
 
 
@@ -68,7 +94,7 @@
   @media (min-width: 767px) {
     .wrapper {
       background-color: beige;
-      grid-template-columns: 1fr 3fr;
+      grid-template-columns: 270px 4fr;
       grid-template-areas:
         "nav     nav"
         "sidebar content"
@@ -79,7 +105,8 @@
     }
     nav ul {
       display: flex;
-      justify-content: space-between;
+      /*justify-content: space-between;*/
+      justify-content: flex-end;
     }
   }
 

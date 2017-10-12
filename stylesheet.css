@@ -6,14 +6,13 @@
 .content {
   grid-area: content;
   background-color: lightgray;
-  /*border-bottom: solid green 1px;*/
+  border-bottom: solid lightgray 1px;
   height: 666px;
-
 }
 .main-nav {
   grid-area: nav;
   background-color: #e06857;
-  /*border-bottom: solid black 1px;*/
+  border-bottom: solid #e06857 1px;
 }
 .navbar {
   list-style: none;
@@ -72,7 +71,7 @@
 
 .side {
   grid-area: sidebar;
-  /*border: solid purple 1px;*/
+  border: solid white 1px;
   background: white;
   color: #e06857;
 }
@@ -86,7 +85,7 @@
 }
 .sideCard {
   background-color: #EEEEEE;
-  /*border: solid blue 1px;*/
+  border: solid #EEEEEE 1px;
   border-radius: 5px;
   align-items: center;
   text-align: center;
@@ -95,7 +94,9 @@
 }
 #search {
   height: 50px;
-  /*border: solid blue 1px;*/
+  /*color: lightgray;*/
+  font: blue;
+  border: solid #EEEEEE 1px;
   border-radius: 5px;
   font-size: small;
   padding-left: 15px;
@@ -109,7 +110,7 @@
 }
 #options {
   background-color: #EEEEEE;
-  border: solid blue 1px;
+  border: solid #EEEEEE 1px;
   color: #e06857;
   height: 30px;
   width: 144px;
@@ -132,10 +133,10 @@
   grid-gap: 0px;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 10px;
+  padding-left: 5px;
   padding-right: 10px;
   justify-items: start;
-  grid-template-columns: 32px 1fr 1fr;
+  grid-template-columns: 35px 1fr 1fr;
   grid-template-areas:
   "image name available"
   ". jobs minutes"

@@ -3,23 +3,17 @@
   padding: 0;
 }
 
-/*body {
-  margin: 0;
-  padding: 0;
-}*/
-
-/*.main-head {
-  grid-area: header;
-}*/
 .content {
   grid-area: content;
-  border: solid yellow 1px;
-  background-color: lightgreen;
+  background-color: lightgray;
+  /*border-bottom: solid green 1px;*/
+  height: 666px;
+
 }
 .main-nav {
   grid-area: nav;
   background-color: #e06857;
-  border-bottom: solid black 1px;
+  /*border-bottom: solid black 1px;*/
 }
 .navbar {
   list-style: none;
@@ -27,7 +21,6 @@
   height: 8px;
   padding: 1em;
   position: relative;
-  /*border: solid green 1px;*/
 }
 .logo {
   float: left;
@@ -37,13 +30,9 @@
   padding-left: 2px;
   padding-top: 5px;
   cursor: pointer;
-  /*border: solid green 1px;*/
 }
 .navbar li {
   display: inline;
-  /*border: solid green 1px;*/
-  /*height: 3px;*/
-  /*padding: 0 1.5em;*/
 }
 .navbar a {
   color: white;
@@ -51,12 +40,11 @@
   font-size: medium;
   padding-right: 30px;
   align-items: center;
-  /*border: solid green 1px;*/
 }
 .navbar a:hover {
- color: blue;
- text-decoration: none;
- cursor: pointer;
+  color: blue;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /*hamburger icon*/
@@ -82,11 +70,115 @@
 /*hamburger icon*/
 
 
-
 .side {
   grid-area: sidebar;
-  border: solid purple 1px;
+  /*border: solid purple 1px;*/
   background: white;
+  color: #e06857;
+}
+.sideList {
+  display: grid;
+  grid-auto-rows: minmax(45px, auto);
+  grid-gap: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.sideCard {
+  background-color: #EEEEEE;
+  /*border: solid blue 1px;*/
+  border-radius: 5px;
+  align-items: center;
+  text-align: center;
+  padding-top: 13px;
+  font-size: 13px;
+}
+#search {
+  height: 50px;
+  /*border: solid blue 1px;*/
+  border-radius: 5px;
+  font-size: small;
+  padding-left: 15px;
+  width: 100%;
+}
+#allDrivers {
+  height: 85px;
+}
+#allJobs {
+  height: 132px;
+}
+#options {
+  background-color: #EEEEEE;
+  border: solid blue 1px;
+  color: #e06857;
+  height: 30px;
+  width: 144px;
+  align-items: center;
+  text-align: center;
+  padding-top: 15px;
+  margin-top: 35px;
+  margin-left: 20px;
+  font-size: 13px;
+}
+.sideCardHeader {
+  padding-bottom: 10px;
+}
+.drivers {
+  width: 220px;
+  background-color: white;
+  display: inline-grid;
+  grid-auto-rows: minmax(15px, 0px);
+  grid-row-gap: 0px;
+  grid-gap: 0px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-items: start;
+  grid-template-columns: 32px 1fr 1fr;
+  grid-template-areas:
+  "image name available"
+  ". jobs minutes"
+}
+.red {
+  color: #ED2027;
+}
+.reddish {
+  color: #E78C7E;
+}
+.green {
+  color: #22D795;
+}
+.available {
+  color: black;
+  font-size: small;
+}
+.normText {
+  color: black;
+  font-size: small;
+}
+.jobs {
+  width: 220px;
+  background-color: white;
+  display: inline-grid;
+  grid-auto-rows: minmax(15px, 0px);
+  grid-row-gap: 0px;
+  grid-gap: 0px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-items: start;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "a b"
+  ". ."
+  "a ."
+  "a ."
+  "a b"
+}
+.justifyEnd {
+  justify-self: end;
 }
 
 
@@ -94,109 +186,44 @@
   background-color: pink;
   display: grid;
   grid-auto-rows: minmax(25px, auto);
-  grid-gap: 20px;
+  /*grid-gap: 20px;*/
   grid-template-columns: 1fr;
   grid-template-areas:
-    "nav"
-    "content"
-    "content"
-    "content"
-    "sidebar";
-  }
+  "nav"
+  "content"
+  "content"
+  "content"
+  "sidebar";
+}
 
 
-  /* two columns when it's bigger than iphone*/
-  /*iPhone 6s plus width is 750px */
-  @media (min-width: 767px) {
-    .wrapper {
-      background-color: beige;
-      grid-template-columns: 270px 4fr;
-      grid-template-areas:
-        "nav     nav"
-        "sidebar content"
-        "sidebar content"
-        "sidebar content"
-        "sidebar content"
-        "sidebar content";
-    }
-    nav ul {
-      display: flex;
-      /*justify-content: space-between;*/
-      justify-content: flex-end;
-    }
-  }
-
-  /* hide navbar list items on mobile screens */
-  /*iPhone 6s plus width is 750px */
-  @media (max-width: 767px) {
-    .main-nav {
-      background-color: blue;
-    }
-    nav ul {
-      display: flex;
-      justify-content: flex-end;
-    }
-    .navbar li:not(:last-child) {display: none;}
-  }
-
-
-
-  /* medium screen - two columns */
-  /*iPhone 6s plus width is 750px */
-  /*@media (max-width: 767px) {
-    .wrapper {
-      background-color: blue;
-      grid-template-columns: 1fr 3fr;
-      grid-template-areas:
-        "header  header"
-        "nav     nav"
-        "sidebar content"
-        "ad      footer";
-    }
-    nav ul {
-      display: flex;
-      justify-content: space-between;
-    }
-  }*/
-
-
-
-
-
-
-/* big screen - three columns */
-/*@media screen and (min-width: 700px) {
+/* two columns when it's bigger than iphone*/
+/*iPhone 6s plus width is 750px */
+@media (min-width: 767px) {
   .wrapper {
-    background-color: green;
-    grid-template-columns: 1fr 4fr 1fr;
+    background-color: beige;
+    grid-template-columns: 270px 4fr;
     grid-template-areas:
-      "header header  header"
-      "nav    content sidebar"
-      "nav    content ad"
-      "footer footer  footer";
-   }
-   nav ul {
-     flex-direction: column;
-   }
-}*/
-
-
-
-
-
-/* ----small last----- */
-/* small screen - one column */
-/*@media screen and (max-width: 499px) {
-.wrapper {
-  background-color: black;
-  grid-gap: 20px;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "header"
-    "nav"
-    "content"
-    "sidebar"
-    "ad"
-    "footer";
+    "nav     nav"
+    "sidebar content"
+    "sidebar content"
+    "sidebar content"
+    "sidebar content"
+    "sidebar content";
   }
-}*/
+  nav ul {
+    display: flex;
+    /*justify-content: space-between;*/
+    justify-content: flex-end;
+  }
+}
+
+/* hide navbar list items on mobile screens */
+/*iPhone 6s plus width is 750px */
+@media (max-width: 767px) {
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .navbar li:not(:last-child) {display: none;}
+}
